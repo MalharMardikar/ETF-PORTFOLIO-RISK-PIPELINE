@@ -9,6 +9,7 @@ ETF price data, loads it into a cloud data warehouse, transforms it
 with dbt, and visualizes portfolio risk metrics in Power BI.
 
 
+![Dashboard Preview](dashboard.png)
 
 ---
 
