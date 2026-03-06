@@ -1,4 +1,4 @@
-\# ETF Portfolio Risk Analysis Pipeline
+# ETF Portfolio Risk Analysis Pipeline
 
 
 
@@ -15,7 +15,7 @@ with dbt, and visualizes portfolio risk metrics in Power BI.
 
 
 
-\## Architecture
+## Architecture
 
 
 
@@ -31,7 +31,6 @@ Apache Airflow (orchestrates everything daily at 8:00 AM)
 
 
 
-\## Tech Stack
 
 
 
@@ -53,7 +52,7 @@ Apache Airflow (orchestrates everything daily at 8:00 AM)
 
 
 
-\## ETFs Tracked
+## ETFs Tracked
 
 
 
@@ -69,7 +68,7 @@ AGG, GLD, IWM, QQQ, SPY, TLT, VTI
 
 
 
-\## Key Metrics Produced
+## Key Metrics Produced
 
 
 
@@ -91,7 +90,7 @@ Result: GLD ranked #1 in Sharpe Ratio (0.47) across the analysis period.
 
 
 
-\## Repository Structure
+## Repository Structure
 
 
 
@@ -135,7 +134,7 @@ Result: GLD ranked #1 in Sharpe Ratio (0.47) across the analysis period.
 
 
 
-\### Prerequisites
+### Prerequisites
 
 
 
@@ -153,7 +152,7 @@ Result: GLD ranked #1 in Sharpe Ratio (0.47) across the analysis period.
 
 
 
-\### 1. AWS S3
+### 1. AWS S3
 
 
 
@@ -163,7 +162,7 @@ Update the bucket name variable in `get\_data\_auto.py`.
 
 
 
-\### 2. Snowflake Setup
+### 2. Snowflake Setup
 
 
 
@@ -181,7 +180,7 @@ In Snowflake, complete the following steps in order:
 
 
 
-\### 3. dbt Configuration
+### 3. dbt Configuration
 
 
 
@@ -195,7 +194,7 @@ In Snowflake, complete the following steps in order:
 
 
 
-\### 4. Apache Airflow (Ubuntu/WSL)
+### 4. Apache Airflow (Ubuntu/WSL)
 
 
 
