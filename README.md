@@ -35,21 +35,17 @@ Apache Airflow (orchestrates everything daily at 8:00 AM)
 
 
 
+## Tech Stack
+
 | Layer          | Tool                        |
-
 |----------------|-----------------------------|
-
 | Orchestration  | Apache Airflow (Ubuntu/WSL) |
-
 | Data Source    | yfinance (Python)           |
-
 | Cloud Storage  | AWS S3                      |
-
 | Data Warehouse | Snowflake                   |
-
 | Transformation | dbt (data build tool)       |
-
 | Visualization  | Microsoft Power BI          |
+
 
 
 
