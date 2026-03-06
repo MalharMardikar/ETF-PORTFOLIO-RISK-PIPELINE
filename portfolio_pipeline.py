@@ -25,6 +25,8 @@ def run_dbt():
         '/mnt/c/Users/mardy/.dbt'
     ], check=True)
 
+TRUNCATE_SQL = "TRUNCATE TABLE RAW_HISTORICAL_PRICES_WIDE;"
+
 COPY_SQL = """
     COPY INTO RAW_HISTORICAL_PRICES_WIDE
     FROM 's3://malharportfolioriskanalysis/Data/historical_prices.csv'
@@ -48,6 +50,12 @@ with DAG(
         python_callable=download_and_upload,
     )
 
+    task_truncate = SnowflakeOperator(
+        task_id='truncate_snowflake_table',
+        sql=TRUNCATE_SQL,
+        snowflake_conn_id='snowflake_default',
+    )
+
     task_load = SnowflakeOperator(
         task_id='load_to_snowflake',
         sql=COPY_SQL,
@@ -59,4 +67,4 @@ with DAG(
         python_callable=run_dbt,
     )
 
-    task_download >> task_load >> task_dbt
+    task_download >> task_truncate >> task_load >> task_dbt
